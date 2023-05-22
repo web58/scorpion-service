@@ -1,0 +1,37 @@
+<div class="site-header__main header-main">
+  <div class="container header-main__container">
+    <div class="header-main__caller">
+      <a href="tel:88412236848">8 (8412) 23-68-48</a>
+    </div>
+    <div class="header-main__logo">
+      <a href="page-main.html">
+        <img src="img/logo.svg"
+             width="202"
+             height="22"
+             alt="Rossvik">
+      </a>
+    </div>
+    <button class="header-main__burger just-burger"
+            type="button"
+            aria-label="Меню"
+            id="just-burger">
+      <span class="just-burger__line just-burger__line--top"></span>
+      <span class="just-burger__line just-burger__line--middle"></span>
+      <span class="just-burger__line just-burger__line--bottom"></span>
+    </button>
+    <div class="header-main__desktop">
+      <div class="header-main__search">
+        @include('../utils/site-search.html')
+      </div>
+      <div class="header-main__cb">
+        <div class="callback-group">
+          <a href="tel:88412707028">8 (8412) 70-70-28</a>
+          <button class="btn-reset"
+                  type="button"
+                  data-hystmodal="#callback-modal">Заказать звонок</button>
+        </div>
+      </div>
+      @include('cart.html')
+    </div>
+  </div>
+</div>

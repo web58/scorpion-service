@@ -1,0 +1,28 @@
+.footer-stores {
+  &__logo {
+    margin-bottom: 30px;
+
+    & img {
+      width: 255px;
+      height: 38px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: 30% 30%;
+      column-gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__list {
+      grid-template-columns: none;
+    }
+  }
+}

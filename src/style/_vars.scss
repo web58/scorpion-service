@@ -1,0 +1,23 @@
+:root {
+  --black-100: #1D1D1B;
+  --black-80: #363B3E;
+  --black-60: #8D969E;
+  --black-40: #DCDCDC;
+  --black-20: #EFEFEF;
+  --black-10: #FBFBFB;
+  --white: #FFFFFF;
+  --yellow: #FFB111;
+  --green: #008E3F;
+  --red: #FF4A11;
+  --blue: #007EC6;
+  --accent: var(--yellow);
+  --text-btn: inherit;
+  --error: #E30613;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$main-font: "Open Sans";
+$mobile-min-width: 360px;

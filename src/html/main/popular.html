@@ -1,0 +1,39 @@
+<section class="main-popular">
+  <div class="container">
+    <h2 class="indent-reset h1 main-popular__title">Популярные товары</h2>
+    <div class="main-popular__slider">
+      <div class="main-popular__slider-controls slider-controls">
+        @include('../utils/slide-controls.html')
+      </div>
+      <div class="main-popular__slider-container slider">
+        <div class="swiper-wrapper slider__wrapper">
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card-action.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card-none.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card-action.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card-action.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card-none.html')
+          </div>
+          <div class="swiper-slide slider__cards">
+            @include('../utils/product-card-action.html')
+          </div>
+        </div>
+        <div class="slider__pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>

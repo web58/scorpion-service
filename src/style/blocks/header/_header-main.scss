@@ -1,0 +1,98 @@
+.header-main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  padding: 10px 0;
+  width: 100%;
+  min-width: $mobile-min-width;
+  color: var(--black);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--black-20);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__caller {
+    position: relative;
+    display: flex;
+    width: 28px;
+    height: 28px;
+
+    & a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 0;
+      color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.5733 18.2313L22.9133 17.2357C22.2092 16.9704 21.4411 16.9251 20.7107 17.1056C19.9802 17.2861 19.3217 17.6841 18.8222 18.2468L16.2556 21.1246C12.2306 19.0858 8.96102 15.8162 6.92222 11.7913L9.73778 9.17792C10.305 8.68158 10.7072 8.02393 10.8907 7.29287C11.0742 6.56181 11.0301 5.79217 10.7644 5.08681L9.76889 2.42681C9.49973 1.70622 9.01456 1.08637 8.37972 0.652003C7.74488 0.21764 6.99137 -0.010024 6.22222 0.000143184H2.31778C1.70306 0.000143184 1.11353 0.244337 0.678861 0.679005C0.244194 1.11367 0 1.70321 0 2.31792C0.00823317 9.12674 2.71667 15.6543 7.53124 20.4689C12.3458 25.2835 18.8734 27.9919 25.6822 28.0001C26.2969 28.0001 26.8865 27.7559 27.3211 27.3213C27.7558 26.8866 28 26.2971 28 25.6824V21.7779C28.0102 21.0088 27.7825 20.2553 27.3481 19.6204C26.9138 18.9856 26.2939 18.5004 25.5733 18.2313Z' fill='%23FFB111'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+
+    & img {
+      display: block;
+      width: 202px;
+      height: 22px;
+    }
+  }
+
+  &__desktop {
+    display: none;
+  }
+
+  @include media-min ($md) {
+    &__logo {
+      & img {
+        width: 220px;
+        height: 24px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    position: static;
+    padding: 16px 0;
+
+    &__caller {
+      display: none;
+    }
+
+    &__logo {
+      & img {
+        width: 294px;
+        height: 32px;
+      }
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__desktop {
+      display: flex;
+    }
+
+    &__search {
+      width: 385px;
+      margin: 0 30px;
+    }
+
+    &__cb {
+      margin-right: 10px;
+    }
+  }
+}

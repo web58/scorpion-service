@@ -1,0 +1,118 @@
+.modal {
+  --field-offset-width: 40px;
+
+  position: relative;
+  margin: 0 auto;
+  padding: 24px;
+  padding-right: 56px;
+  width: calc(100% - 30px);
+  max-width: 354px;
+  color: var(--black-100);
+  background-color: var(--white);
+  background-image: linear-gradient(to left, var(--green) var(--field-offset-width), transparent var(--field-offset-width));
+  border-radius: 4px;
+
+  &__close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    & > span {
+      --width: 0.25em;
+
+      background-image: linear-gradient(to top, var(--accent) var(--width), transparent var(--width));
+      background-repeat: no-repeat;
+      background-position-y: -2px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+
+  &__order-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__form-confirm {
+    margin-top: 12px;
+    color: var(--black-60);
+  }
+
+  &__submit {
+    margin-top: 12px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  @include media-min ($md) {
+    --field-offset-width: 70px;
+
+    width: 100%;
+    padding: 36px;
+    padding-right: 90px;
+    max-width: 500px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__order-title {
+      margin-bottom: 24px;
+    }
+
+    &__btn {
+      width: auto;
+    }
+
+    &__submit {
+      justify-self: start;
+    }
+  }
+
+  @include media-min ($xl) {
+    --field-offset-width: 90px;
+
+    padding-right: 120px;
+    max-width: 540px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__order-title {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__form-confirm {
+      margin-top: 18px;
+    }
+
+    &__submit {
+      margin-top: 18px;
+    }
+  }
+}

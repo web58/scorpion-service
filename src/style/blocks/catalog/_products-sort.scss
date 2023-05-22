@@ -1,0 +1,35 @@
+.products-sort {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 8px;
+  }
+
+  &__select {
+    padding: 9px 12px;
+    padding-right: 42px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    appearance: none;
+    color: var(--black-100);
+    background-color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.8541 6.03438L9.04446 11.8861L3.19527 5.99457C3.10342 5.90129 2.99415 5.82726 2.87374 5.77673C2.75334 5.72621 2.6242 5.7002 2.49377 5.7002C2.36333 5.7002 2.23419 5.72621 2.11379 5.77673C1.99339 5.82726 1.88411 5.90129 1.79226 5.99457C1.69965 6.08709 1.62615 6.19715 1.57599 6.31843C1.52583 6.4397 1.5 6.56978 1.5 6.70115C1.5 6.83253 1.52583 6.9626 1.57599 7.08388C1.62615 7.20515 1.69965 7.31522 1.79226 7.40773L8.34295 14.0058C8.43481 14.0991 8.54408 14.1731 8.66448 14.2237C8.78489 14.2742 8.91403 14.3002 9.04446 14.3002C9.17489 14.3002 9.30404 14.2742 9.42444 14.2237C9.54484 14.1731 9.65412 14.0991 9.74597 14.0058L10.3981 13.2992L16.2077 7.44754C16.3003 7.35503 16.3739 7.24496 16.424 7.12369C16.4742 7.00241 16.5 6.87234 16.5 6.74096C16.5 6.60958 16.4742 6.47951 16.424 6.35823C16.3739 6.23696 16.3003 6.12689 16.2077 6.03438C16.0245 5.86084 15.7824 5.76423 15.5309 5.76423C15.2794 5.76423 15.0374 5.86084 14.8541 6.03438Z' fill='%23FFB111'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right 12px;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  @include media-min ($md) {
+    flex-direction: row;
+    align-items: center;
+
+    &__label {
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+  }
+}

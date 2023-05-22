@@ -1,0 +1,82 @@
+.catalog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid var(--green);
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__link {
+    color: var(--black-100);
+    text-decoration: none;
+    padding: 24px;
+    outline: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      z-index: 1;
+      transition: box-shadow .2s ease-in-out;
+    }
+
+    &:focus:not(:hover) {
+      &::after {
+        box-shadow: inset 0 0 0 1px var(--white), inset 0 0 0 2px var(--black-60);
+      }
+    }
+  }
+
+  &__icon {
+    width: 185px;
+    align-self: flex-end;
+  }
+
+  @include media-min ($md) {
+    justify-content: space-between;
+
+    &__link {
+      padding: 20px 10px;
+    }
+
+    &__icon {
+      width: 160px;
+    }
+  }
+
+  @include media-min ($xl) {
+    transition: border-color .2s ease-in-out;
+
+    &:hover {
+      border-color: var(--accent);
+    }
+
+    &__link {
+      padding: 30px;
+
+      & > span {
+        --width: 0.25em;
+
+        transition: background .2s ease-in-out;
+        background-image: linear-gradient(to top, var(--accent) var(--width), transparent var(--width));
+        background-repeat: no-repeat;
+        background-position-y: var(--width);
+      }
+
+      &:hover {
+        & > span {
+          background-position-y: -2px;
+        }
+      }
+    }
+
+    &__icon {
+      width: 240px;
+    }
+  }
+}

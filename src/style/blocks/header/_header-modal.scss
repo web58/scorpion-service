@@ -1,0 +1,77 @@
+.header-modal {
+  pointer-events: none;
+
+  &[aria-hidden="false"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 54px;
+    z-index: 2;
+    pointer-events: auto;
+
+    & .header-modal__content {
+      display: block;
+
+      @include anim(fade, .3s);
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    color: var(--black);
+    background-color: var(--white);
+    overflow: auto;
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+  }
+
+  &__search {
+    margin-bottom: 30px;
+  }
+
+  &__cb {
+    margin-bottom: 20px;
+  }
+
+  &__cart {
+    margin-bottom: 30px;
+  }
+
+  &__adress {
+    display: grid;
+    row-gap: 12px;
+
+    & span {
+      position: relative;
+      padding-left: 24px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 16px;
+        height: 22px;
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='12' viewBox='0 0 10 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.00113 0.5C3.83636 0.5 2.7193 0.953521 1.89569 1.76079C1.07208 2.56806 0.609375 3.66296 0.609375 4.80462C0.609375 7.18209 3.64982 11.7931 5.00113 11.7931C6.35244 11.7931 9.39288 7.18209 9.39288 4.80462C9.39288 3.66296 8.93018 2.56806 8.10657 1.76079C7.28295 0.953521 6.16589 0.5 5.00113 0.5ZM5.00113 7.45361C4.4666 7.45361 3.94408 7.29825 3.49963 7.00717C3.05519 6.7161 2.70879 6.30238 2.50424 5.81834C2.29968 5.3343 2.24616 4.80168 2.35044 4.28782C2.45472 3.77397 2.71212 3.30196 3.09009 2.93149C3.46806 2.56103 3.94962 2.30873 4.47387 2.20652C4.99813 2.10431 5.54154 2.15677 6.03538 2.35726C6.52922 2.55776 6.95131 2.89729 7.24827 3.33291C7.54524 3.76854 7.70375 4.28069 7.70375 4.80462C7.70375 5.50717 7.41901 6.18096 6.91217 6.67774C6.40533 7.17452 5.71791 7.45361 5.00113 7.45361Z' fill='%23FFB111'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 12px 15px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    display: none;
+  }
+}

@@ -1,0 +1,92 @@
+.products-filters {
+  --max-width-form: 540px;
+
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: var(--black-100);
+  background-color: var(--white);
+  z-index: 3;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  overflow-y: auto;
+
+  &--open {
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: max(15px, calc((100% - var(--max-width-form)) / 2));
+    color: var(--black-60);
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 20px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: var(--max-width-form);
+  }
+
+  &__label {
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    & li {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    max-width: 330px;
+  }
+
+  @include media-min ($md) {
+    --max-width-form: 690px;
+
+    &__form {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @include media-min ($lg) {
+    --max-width-form: 940px;
+  }
+
+  @include media-min ($xl) {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    &__close {
+      display: none;
+    }
+
+    &__form {
+      width: auto;
+      max-width: none;
+      margin: 0;
+    }
+
+    &__list {
+      max-height: 368px;
+      overflow-y: auto;
+    }
+  }
+}

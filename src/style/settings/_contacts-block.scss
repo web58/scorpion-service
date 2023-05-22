@@ -1,0 +1,110 @@
+.contacts-block {
+  color: var(--black-100);
+  background-color: var(--white);
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 4px;
+
+  &--accent {
+    --text-btn: var(--black-100);
+
+    color: var(--white);
+    background-color: var(--green);
+  }
+
+  &--center {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: center
+  }
+
+  & > * {
+    margin: 12px 0;
+  }
+
+  &__group {
+    display: grid;
+    row-gap: 12px;
+    justify-items: start;
+  }
+
+  &__color-label {
+    color: var(--green)
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 6px;
+    padding-bottom: 4px;
+    color: var(--white);
+    background-color: var(--green);
+    border-radius: 2px;
+  }
+
+  &__shedule {
+    display: grid;
+    justify-items: start;
+  }
+
+  &__sheme-link {
+    & a {
+      position: relative;
+      display: inline-block;
+      padding-left: 24px;
+      color: inherit;
+      text-decoration-color: transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.8793 6.69637L9.6444 2.1509C9.55406 2.05454 9.42795 2 9.29432 2H6.47107C6.28568 2 6.11722 2.10545 6.04099 2.26909C5.96571 2.43363 5.99677 2.62546 6.12098 2.75818L10.0725 7L6.12098 11.2409C5.99677 11.3745 5.96477 11.5663 6.04099 11.73C6.11722 11.8945 6.28568 12 6.47107 12H9.29432C9.42795 12 9.55406 11.9446 9.6444 11.85L13.8793 7.30454C14.0402 7.13182 14.0402 6.86818 13.8793 6.69637Z' fill='%23FFB111'/%3E%3Cpath d='M7.87931 6.69637L3.64442 2.1509C3.55407 2.05454 3.42797 2 3.29433 2H0.471072C0.285678 2 0.117224 2.10545 0.0409959 2.26909C-0.034291 2.43363 -0.00323519 2.62546 0.120988 2.75818L4.07261 7L0.120988 11.2409C-0.00323519 11.3745 -0.0352321 11.5663 0.0409959 11.73C0.117224 11.8945 0.285678 12 0.471072 12H3.29433C3.42797 12 3.55407 11.9446 3.64442 11.85L7.87931 7.30454C8.04023 7.13182 8.04023 6.86818 7.87931 6.69637Z' fill='%23FFB111'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__email {
+    & a {
+      font-size: 18px;
+      color: inherit;
+    }
+  }
+
+  &__modal-trigger {
+    align-self: start;
+  }
+
+  @include media-min ($xl) {
+    &__sheme-link {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+
+    &__email {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+  }
+}

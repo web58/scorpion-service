@@ -1,0 +1,52 @@
+.site-search {
+  &__form {
+    margin-bottom: 24px;
+  }
+
+  &__result-status {
+    margin-bottom: 30px;
+  }
+
+  &__result-list {
+    display: grid;
+    row-gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  &__bottom {
+    --decor-width: 100%;
+    --decor-height: 214px;
+    --icon-width: 180px;
+    --icon-height: 126px;
+  }
+
+  @include media-min ($md) {
+    &__bottom {
+      --decor-width: 210px;
+      --decor-height: 180px;
+      --icon-width: 154px;
+      --icon-height: 108px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__result-list {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-bottom: 80px;
+
+      & > li {
+        & > * {
+          height: 100%;
+        }
+      }
+    }
+
+    &__bottom {
+      --decor-width: 350px;
+      --decor-height: 290px;
+      --icon-width: 250px;
+      --icon-height: 174px;
+    }
+  }
+}

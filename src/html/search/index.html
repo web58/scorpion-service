@@ -1,0 +1,28 @@
+<section class="site-search">
+  <div class="container">
+    <h1 class="h1 site__main-title">Поиск</h1>
+    <div class="site-search__form">
+      @include('../utils/site-search.html')
+    </div>
+    <div class="site-search__result-status">По вашему запросу найдено 2 товара</div>
+    <ul class="list-reset site-search__result-list">
+      <li>@include('../utils/product-card-action.html')</li>
+      <li>@include('../utils/product-card.html')</li>
+    </ul>
+    <div class="site-search__bottom additional-sale">
+      <div class="additional-sale__decor">
+        <svg width="180"
+             height="126"
+             aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-truck"></use>
+        </svg>
+      </div>
+      <div class="additional-sale__content">
+        <div class="h1 additional-sale__title">Привезем необходимые товары под заказ</div>
+        <div class="lg-text additional-sale__text">Если у нас нет какого-либо нужного вам товара, ознакомьтесь с каталогами производителей и мы привезем вам нужные товары в короткие сроки.</div>
+        <div><a class="btn btn--light additional-sale__btn"
+             href="#">Посмотреть каталоги</a></div>
+      </div>
+    </div>
+  </div>
+</section>

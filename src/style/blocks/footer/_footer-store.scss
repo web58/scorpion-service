@@ -1,0 +1,29 @@
+.footer-store {
+  display: grid;
+  row-gap: 12px;
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__phone {
+    & a {
+      font-weight: 700;
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__phone {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+  }
+}

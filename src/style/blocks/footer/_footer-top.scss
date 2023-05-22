@@ -1,0 +1,40 @@
+.footer-top {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: var(--white);
+  background-color: var(--black-80);
+
+  &__stores {
+    margin-bottom: 40px;
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 50px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 30px;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 4fr 5fr 3fr;
+      column-gap: 30px;
+    }
+
+    &__stores {
+      margin-bottom: 0;
+    }
+
+    &__nav {
+      margin-bottom: 0;
+    }
+
+    &__contacts {
+      justify-self: end;
+    }
+  }
+}

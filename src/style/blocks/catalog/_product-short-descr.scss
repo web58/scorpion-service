@@ -1,0 +1,19 @@
+.product-short-descr {
+  display: grid;
+  row-gap: 12px;
+  margin: 0;
+  min-width: 270px;
+
+  &__item {
+    display: flex;
+
+    & dt {
+      color: var(--black-60);
+    }
+
+    & dd {
+      margin: 0;
+      margin-left: 8px;
+    }
+  }
+}

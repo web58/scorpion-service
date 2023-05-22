@@ -1,0 +1,17 @@
+.product-tech {
+  &__title {
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & td {
+      padding: 8px;
+      border: 1px solid var(--black-40);
+      vertical-align: top;
+    }
+  }
+}

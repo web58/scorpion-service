@@ -1,0 +1,36 @@
+.catalog {
+  &__categories {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  &__products {
+    margin-bottom: 60px;
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+  }
+
+  @include media-min ($md) {
+    &__categories {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__categories {
+      margin-bottom: 80px;
+    }
+
+    &__descr {
+      max-width: 920px;
+    }
+
+    &__products {
+      margin-bottom: 80px;
+    }
+  }
+}

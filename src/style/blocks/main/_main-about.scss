@@ -1,0 +1,109 @@
+.main-about {
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &__decor {
+    & img {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  &__descr {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  &__text {
+    & p {
+      margin: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__lead-text {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.36;
+    margin-bottom: 12px;
+
+    &--accent {
+      display: inline;
+      font-weight: 600;
+      padding: 4px 2px;
+      font-size: 26px;
+      line-height: 1.2;
+      color: var(--white);
+      background-color: var(--green);
+    }
+  }
+
+  &__tour-title {
+    margin-bottom: 24px;
+  }
+
+  &__tour-descr {
+    margin-bottom: 30px;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__tour-links {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+
+    &__info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+
+    &__descr {
+      padding: 0;
+    }
+
+    &__tour-links {
+      display: flex;
+      gap: 0;
+      margin: -15px;
+      flex-wrap: wrap;
+
+      & > * {
+        flex-basis: 100%;
+        max-width: calc(33% - 30px);
+        margin: 15px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    &__tour {
+      display: grid;
+      grid-template-columns: 415px auto;
+      column-gap: 60px;
+    }
+
+    &__text-content {
+      align-self: center;
+    }
+
+    &__tour-links {
+      & > * {
+        max-width: calc(43% - 30px);
+      }
+    }
+  }
+}

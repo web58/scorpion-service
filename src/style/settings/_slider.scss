@@ -1,0 +1,59 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    box-sizing: border-box;
+  }
+
+  &__cards {
+    height: auto;
+
+    & > * {
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    --swiper-theme-color: var(--accent);
+    --swiper-pagination-bullet-width: 6px;
+    --swiper-pagination-bullet-height: 6px;
+
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+
+    & .swiper-pagination-bullet {
+      transition: transform .2s ease-in-out;
+
+      &-active {
+        transform: scale(1.6);
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__pagination {
+      display: none;
+    }
+  }
+}
+
+.slider-controls-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--black-40);
+  border-radius: 4px;
+
+  @include media-min ($xl) {
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: var(--accent);
+    }
+  }
+}

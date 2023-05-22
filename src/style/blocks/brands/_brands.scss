@@ -1,0 +1,21 @@
+.brands {
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__content {
+      max-width: 730px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}

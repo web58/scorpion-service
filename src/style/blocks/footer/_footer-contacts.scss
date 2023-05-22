@@ -1,0 +1,94 @@
+.footer-contacts {
+  --text-btn: var(--white);
+
+  display: grid;
+  row-gap: 20px;
+  justify-items: center;
+  text-align: center;
+
+  &__logo {
+    text-align: center;
+
+    & img {
+      width: 160px;
+      height: 76px;
+    }
+
+    & span {
+      display: block;
+      width: 180px;
+      margin: 0 auto;
+      margin-top: 6px;
+      font-size: 12px;
+    }
+  }
+
+  &__email {
+    margin-top: 20px;
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    & a {
+      display: inline-block;
+      padding-left: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0559 12.4444H1.94477C1.73849 12.4444 1.54066 12.5264 1.3948 12.6722C1.24894 12.8181 1.16699 13.0159 1.16699 13.2222C1.16699 13.4285 1.24894 13.6263 1.3948 13.7722C1.54066 13.9181 1.73849 14 1.94477 14H12.0559C12.2622 14 12.46 13.9181 12.6059 13.7722C12.7517 13.6263 12.8337 13.4285 12.8337 13.2222C12.8337 13.0159 12.7517 12.8181 12.6059 12.6722C12.46 12.5264 12.2622 12.4444 12.0559 12.4444Z' fill='%23FFB111'/%3E%3Cpath d='M6.4481 11.4411C6.52207 11.5119 6.6093 11.5674 6.70477 11.6044C6.79787 11.6456 6.89854 11.6668 7.00033 11.6668C7.10211 11.6668 7.20278 11.6456 7.29588 11.6044C7.39135 11.5674 7.47858 11.5119 7.55255 11.4411L10.6637 8.33C10.8101 8.18354 10.8924 7.9849 10.8924 7.77778C10.8924 7.57065 10.8101 7.37201 10.6637 7.22556C10.5172 7.0791 10.3186 6.99682 10.1114 6.99682C9.90431 6.99682 9.70567 7.0791 9.55922 7.22556L7.7781 9.01444V0.777778C7.7781 0.571498 7.69616 0.373667 7.5503 0.227806C7.40444 0.0819442 7.2066 0 7.00033 0C6.79405 0 6.59622 0.0819442 6.45035 0.227806C6.30449 0.373667 6.22255 0.571498 6.22255 0.777778V9.01444L4.44144 7.22556C4.29498 7.0791 4.09634 6.99682 3.88921 6.99682C3.68209 6.99682 3.48345 7.0791 3.33699 7.22556C3.19053 7.37201 3.10825 7.57065 3.10825 7.77778C3.10825 7.9849 3.19053 8.18354 3.33699 8.33L6.4481 11.4411Z' fill='%23FFB111'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: top 2px left;
+      background-size: 14px 14px;
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  @include media-min ($md) {
+    grid-template-columns: repeat(3, 30%);
+    column-gap: 30px;
+    justify-items: start;
+    align-items: start;
+    text-align: left;
+
+    &__logo {
+      text-align: left;
+    }
+
+    &__messengers {
+      display: block;
+    }
+  }
+
+  @include media-min ($xl) {
+    grid-template-columns: none;
+
+    &__email {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+
+    &__price {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+  }
+}

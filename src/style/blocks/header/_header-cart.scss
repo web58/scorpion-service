@@ -1,0 +1,76 @@
+.header-cart {
+  display: flex;
+  justify-content: flex-start;
+
+  &--empty {
+    & .header-cart__count {
+      display: none;
+    }
+
+    & .header-cart__cost {
+      display: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    min-height: 38px;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.5862 21.414C21.7986 21.414 20.3443 22.8683 20.3443 24.6559C20.3443 26.4435 21.7987 27.8978 23.5862 27.8978C25.3738 27.8978 26.8281 26.4435 26.8281 24.6559C26.8281 22.8683 25.3738 21.414 23.5862 21.414ZM23.5862 25.9527C22.8711 25.9527 22.2895 25.3711 22.2895 24.6559C22.2895 23.9407 22.8711 23.3591 23.5862 23.3591C24.3014 23.3591 24.883 23.9407 24.883 24.6559C24.883 25.3711 24.3014 25.9527 23.5862 25.9527ZM28.7934 8.88428C28.7025 8.768 28.5863 8.67395 28.4536 8.6093C28.3209 8.54464 28.1752 8.51107 28.0276 8.51114H9.00341L8.12808 4.84876C8.07721 4.63613 7.95621 4.44682 7.78458 4.31138C7.61295 4.17593 7.40071 4.10223 7.18207 4.10217H3.97257C3.4354 4.10212 3 4.53752 3 5.07469C3 5.61186 3.4354 6.04726 3.97257 6.04726H6.41441L9.57526 19.273C9.62607 19.4857 9.74706 19.675 9.9187 19.8105C10.0903 19.9459 10.3026 20.0196 10.5213 20.0196H25.6611C26.1081 20.0196 26.4978 19.7148 26.6051 19.2811L28.9717 9.71741C29.007 9.5741 29.0093 9.42464 28.9784 9.28031C28.9476 9.13599 28.8843 9.00057 28.7934 8.88428ZM24.9001 18.0745H11.2889L9.46826 10.4563H26.785L24.9001 18.0745ZM11.818 21.414C10.0304 21.414 8.57613 22.8683 8.57613 24.6559C8.57613 26.4435 10.0305 27.8978 11.818 27.8978C13.6056 27.8978 15.0599 26.4435 15.0599 24.6559C15.0599 22.8683 13.6056 21.414 11.818 21.414ZM11.818 25.9527C11.1029 25.9527 10.5213 25.3711 10.5213 24.6559C10.5213 23.9407 11.1029 23.3591 11.818 23.3591C12.5332 23.3591 13.1148 23.9407 13.1148 24.6559C13.1148 25.3711 12.5332 25.9527 11.818 25.9527Z' fill='%23FFB111'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 32px 32px;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    font-size: 9px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--green);
+    min-width: 14px;
+    min-height: 14px;
+    padding: 2px 1px;
+    border-radius: 50%;
+  }
+
+  &__cost {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--black-60);
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration-color: var(--accent);
+      }
+    }
+  }
+}

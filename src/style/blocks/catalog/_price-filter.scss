@@ -1,0 +1,72 @@
+.price-filter {
+  max-width: 360px;
+  overflow: hidden;
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--black-60);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__input {
+    max-width: 120px;
+    padding: 8px;
+    color: inherit;
+    border: none;
+
+    &--r-aligned {
+      text-align: right;
+    }
+  }
+
+  &__range {
+    width: calc(100% - 12px);
+    margin: 0 auto;
+    transform: translateY(-2px);
+
+    &.noUi-horizontal {
+      height: 8px;
+    }
+
+    &.noUi-target {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    .noUi-connect {
+      background-color: var(--accent);
+      height: 4px;
+    }
+
+    .noUi-handle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      box-shadow: none;
+      cursor: pointer;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .noUi-handle-lower {
+      right: -12px;
+      top: -4px;
+    }
+
+    .noUi-handle-upper {
+      right: 0;
+      top: -4px;
+    }
+  }
+}

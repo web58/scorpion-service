@@ -1,0 +1,57 @@
+.about-brands {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: var(--black-100);
+  background-color: var(--black-10);
+
+  &__top {
+    margin-bottom: 30px;
+
+  }
+
+  &__title {
+    color: var(--green);
+    margin-bottom: 24px;
+  }
+
+  &__slider {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--white);
+  }
+
+  @include media-min ($md) {
+    &__top {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+      align-items: center;
+    }
+
+    &__title {
+      grid-column: span 5;
+      margin-bottom: 0;
+    }
+
+    &__descr {
+      grid-column: span 7;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    &__top {
+      align-items: start;
+    }
+
+    &__title {
+      grid-column: 2/5;
+    }
+
+    &__descr {
+      grid-column: 7/12;
+    }
+  }
+}

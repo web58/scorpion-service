@@ -1,0 +1,71 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+  @include visually-hidden;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 540px;
+
+  @include media-min ($md) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 690px;
+  }
+
+  @include media-min ($lg) {
+    max-width: 940px;
+  }
+
+  @include media-min ($xl) {
+    max-width: 1110px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.is-open-menu {
+  overflow: hidden;
+
+  @include media-min ($xl) {
+    overflow: unset;
+  }
+}
+
+.indent-reset {
+  @include indent-reset;
+}
+
+.list-reset {
+  @include list-reset;
+}
+
+.btn-reset {
+  @include btn-reset;
+}
+
+.is-accent {
+  color: var(--accent);
+}
+
+.custom-scroll {
+  scrollbar-color: var(--scrollbar-thumb, var(--black-60)) var(--scrollbar, transparent);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: var(--scrollbar, transparent);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar, var(--black-60));
+  }
+}

@@ -1,0 +1,59 @@
+.footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--white);
+  background-color: var(--black-100);
+
+  &__rules {
+    display: grid;
+    row-gap: 16px;
+    margin-bottom: 16px;
+    justify-items: center;
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__dev {
+    text-align: center;
+
+    & svg {
+      width: 150px;
+      height: 16px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__rules {
+      display: flex;
+      row-gap: 0;
+      margin-bottom: 12px;
+
+      & > span {
+        margin-right: auto;
+      }
+
+      & > a {
+        margin-left: 20px;
+      }
+    }
+
+    &__dev {
+      text-align: right;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__rules {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+  }
+}

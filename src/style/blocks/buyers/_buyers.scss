@@ -1,0 +1,46 @@
+.buyers {
+  &__descr {
+    margin-bottom: 30px;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+    & a {
+      color: var(--green);
+    }
+  }
+
+  &__cover {
+    & img {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 445px;
+      align-items: start;
+      column-gap: 125px;
+    }
+
+    &__descr {
+      margin-bottom: 0;
+
+      & a {
+        transition: text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          text-decoration-color: transparent;
+        }
+      }
+    }
+  }
+}

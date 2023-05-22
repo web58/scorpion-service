@@ -1,0 +1,28 @@
+<div class="header-modal"
+     aria-hidden="true">
+  <div class="header-modal__content">
+    <div class="container">
+      <div class="header-modal__nav">
+        @include('nav.html')
+      </div>
+      <div class="header-modal__search">
+        @include('../utils/site-search.html')
+      </div>
+      <div class="header-modal__cb">
+        <div class="callback-group">
+          <a href="tel:88412707028">8 (8412) 70-70-28</a>
+          <button class="btn-reset"
+                  type="button"
+                  data-hystmodal="#callback-modal">Заказать звонок</button>
+        </div>
+      </div>
+      <div class="header-modal__cart">
+        @include('cart.html', {'cart':'empty'})
+      </div>
+      <div class="header-modal__adress">
+        <span>г. Пенза, ул. Калинина, 158</span>
+        <span>г. Пенза, ул. Проспект Победы, 107Б</span>
+      </div>
+    </div>
+  </div>
+</div>

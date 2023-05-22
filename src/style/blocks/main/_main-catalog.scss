@@ -1,0 +1,75 @@
+.main-catalog {
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  &__accent-block {
+    --text-btn: var(--black-100);
+
+    padding: 30px 24px;
+    color: var(--white);
+    background-color: var(--green);
+    border-radius: 4px;
+  }
+
+  &__accent-title {
+    margin-bottom: 16px;
+  }
+
+  &__accent-text {
+    margin-bottom: 24px;
+  }
+
+  &__lead {
+    margin-bottom: 20px;
+  }
+
+  &__categories {
+    display: grid;
+    row-gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  @include media-min ($md) {
+    &__accent-block {
+      padding: 30px 24px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 30px;
+    }
+
+    &__lead {
+      margin-bottom: 0;
+      grid-column: span 3;
+    }
+
+    &__categories {
+      display: contents;
+      row-gap: 0;
+      margin-bottom: 0;
+
+      & > li {
+        grid-column: span 2;
+
+        &:first-child {
+          grid-column: span 3;
+        }
+      }
+    }
+
+    &__order {
+      grid-column: span 6;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+    &__accent-block {
+      padding: 40px;
+    }
+  }
+}

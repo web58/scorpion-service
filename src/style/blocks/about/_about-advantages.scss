@@ -1,0 +1,71 @@
+.about-advantages {
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  &__content {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--green);
+    padding: 20px;
+    border-radius: 4px;
+    min-height: 160px;
+  }
+
+  &__list {
+    display: contents;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 60px auto;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--black-40);
+    border-radius: 4px;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__text {
+    display: grid;
+    row-gap: 16px;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 60px;
+
+    &__content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    &__title {
+      min-height: 312px;
+    }
+
+    &__item {
+      grid-template-columns: none;
+      grid-template-rows: 60px auto;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__title {
+      min-height: 320px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.main-brands {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__title {
+    color: var(--green);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+
+  }
+}

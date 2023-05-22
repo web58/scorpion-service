@@ -1,0 +1,18 @@
+<section class="product">
+  <div class="container">
+    <h1 class="h2 site__main-title">Гнутая монтировочная лопатка с обрезиненной рукояткой 915 мм JTC-3003</h1>
+    <div class="product__top">
+      @include('images.html')
+      <div class="product__meta">
+        @include('parameters.html')
+        @if(!context.page) {@include('price.html')}
+        @if(context.page === 'none') {@include('price-none.html')}
+      </div>
+    </div>
+    <div class="product__info">
+      @include('descr.html')
+      @include('tech.html')
+      @include('docs.html')
+    </div>
+  </div>
+</section>

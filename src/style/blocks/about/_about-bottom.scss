@@ -1,0 +1,20 @@
+.about-bottom {
+  --decor-width: 100%;
+  --decor-height: 214px;
+  --icon-width: 160px;
+  --icon-height: 160px;
+
+  @include media-min ($md) {
+    --decor-width: 210px;
+    --decor-height: 180px;
+    --icon-width: 154px;
+    --icon-height: 154px;
+  }
+
+  @include media-min ($xl) {
+    --decor-width: 350px;
+    --decor-height: 220px;
+    --icon-width: 200px;
+    --icon-height: 200px;
+  }
+}

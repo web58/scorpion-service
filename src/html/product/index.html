@@ -1,0 +1,34 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__products catalog-products">
+      <h1 class="h1 site__main-title catalog-products__title">Монтировки</h1>
+      <div class="catalog-products__sort">
+        @include('products-sort.html')
+        <button class="btn-reset btn catalog-products__filter-trigger"
+                type="button">Фильтры</button>
+      </div>
+      <div class="catalog-products__content">
+        <div class="catalog-products__filters">
+          @include('products-filters.html')
+        </div>
+        <ul class="list-reset catalog-products__list">
+          <li>@include('../utils/product-card-action.html')</li>
+          <li>@include('../utils/product-card.html')</li>
+          <li>@include('../utils/product-card-none.html')</li>
+          <li>@include('../utils/product-card-action.html')</li>
+          <li>@include('../utils/product-card-action.html')</li>
+          <li>@include('../utils/product-card.html')</li>
+          <li>@include('../utils/product-card-none.html')</li>
+          <li>@include('../utils/product-card-action.html')</li>
+        </ul>
+      </div>
+      <div class="catalog-products__pagination">
+        @include('../utils/pagination.html')
+      </div>
+    </div>
+    <h2 class="indent-reset h4 catalog__subtitle">Оборудование для автосервиса и гаража в Пензе</h2>
+    <div class="catalog__descr">
+      <p>Поможем в выборе оборудования для автосервиса и гаража в Пензе. На нашем сайте представлен широкий ассортимент моделей, даны основные характеристики и подробные описания. Также есть отзывы пользователей, которые помогут составить полное мнение о товаре. А если вам нужна консультация, позвоните или закажите звонок с сайта. Менеджер поможет определиться с выбором и оформит заказ на оборудование для автосервиса и гаража. Вы получите товар в кратчайшие сроки!</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+.tour-card {
+  display: flex;
+  flex-direction: column;
+  color: var(--black-100);
+  background-color: var(--white);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__img {
+    height: 130px;
+
+    & img {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 24px;
+    padding-top: 20px;
+    background-color: var(--accent);
+
+    & b {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    --icon-width: 18px;
+    --icon-height: 18px;
+
+    padding: 10px 16px;
+  }
+
+  @include media-min ($md) {
+    &__img {
+      height: 160px;
+    }
+
+    &__meta {
+      flex-grow: 1;
+
+      & b {
+        flex-grow: 1;
+      }
+    }
+  }
+}

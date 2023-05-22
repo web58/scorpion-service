@@ -1,0 +1,45 @@
+.person {
+  display: grid;
+  row-gap: 6px;
+
+  &__post {
+    color: var(--black-60);
+  }
+
+  &__phone {
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__email {
+    & a {
+      color: inherit;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__phone {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+
+    &__email {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration-color: var(--accent);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.menu-dropdown {
+  & li > ul {
+    margin-left: 14px;
+  }
+
+  & ul {
+    display: none;
+  }
+
+  & a {
+    padding-right: 30px;
+  }
+
+  &__link {
+    position: relative;
+
+    &::after {
+      --triangle-width: 7px;
+
+      content: '';
+      position: absolute;
+      top: 18px;
+      right: 12px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: var(--triangle-width) 0 var(--triangle-width) var(--triangle-width);
+      border-color: transparent transparent transparent var(--black-60);
+      transition: border-color .2s ease-in-out, transform .2s ease-in-out;
+    }
+
+    & + ul {
+      display: none;
+    }
+
+    &--expanded {
+      &::after {
+        border-color: transparent transparent transparent var(--accent);
+        transform: rotateZ(90deg);
+      }
+
+      & + ul {
+        display: block;
+
+        @include anim(fade, .35s);
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    & li > ul {
+      margin-left: 0;
+    }
+
+    & > li > a {
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.705078' y='2.43628' width='14' height='1.30392' rx='0.651961' fill='%23FFB111'/%3E%3Crect x='0.705078' y='10.2598' width='14' height='1.30392' rx='0.651961' fill='%23FFB111'/%3E%3Crect x='0.5' y='6.34802' width='10.6667' height='1.30392' rx='0.651961' fill='%23FFB111'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & li {
+      position: relative;
+
+      &:hover,
+      &:focus-within {
+        & > ul {
+          display: block;
+
+          @include anim(fade, .2s);
+        }
+      }
+    }
+
+    & > li {
+      & ul {
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        width: 255px;
+        background-color: var(--white);
+        z-index: 2;
+
+        & ul {
+          left: calc(100% + 1px);
+          top: 0;
+        }
+
+        & li {
+          border-bottom: 1px solid var(--black-20);
+          border-right: 1px solid var(--black-20);
+        }
+      }
+    }
+  }
+}
