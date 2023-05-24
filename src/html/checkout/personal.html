@@ -1,0 +1,46 @@
+<fieldset class="checkout__fieldset">
+  <legend class="h4">Личные данные</legend>
+  <div class="checkout__grid">
+    <div>
+      <label class="small-text form__label"
+             for="checkout-personal-name">Ваше имя *</label>
+      <input class="form__input"
+             type="text"
+             name="Имя"
+             id="checkout-personal-name"
+             placeholder="Ваше имя *"
+             required
+             data-validate="text">
+    </div>
+    <div>
+      <label class="small-text form__label"
+             for="checkout-personal-email">Электронная почта</label>
+      <input class="form__input"
+             type="email"
+             name="Электронная&nbsp;почта"
+             id="checkout-personal-email"
+             placeholder="mail@example.ru">
+    </div>
+    <div>
+      <label class="small-text form__label"
+             for="checkout-personal-phone">Телефон *</label>
+      <input class="form__input"
+             type="tel"
+             name="Телефон"
+             id="checkout-personal-phone"
+             placeholder="+7 (___) ___ __ __"
+             required
+             data-validate="phone">
+    </div>
+    <div class="checkout__optional checkout__company"></div>
+    <div class="checkout__optional checkout__adress"></div>
+    <div class="checkout__fullwidth">
+      <label class="small-text form__label"
+             for="checkout-personal-message">Комментарий к заказу</label>
+      <textarea class="form__input form__textarea"
+                name="Комментарий&nbsp;к&nbsp;заказу"
+                id="checkout-personal-message"
+                placeholder="Комментарий к заказу"></textarea>
+    </div>
+  </div>
+</fieldset>

@@ -1,0 +1,13 @@
+<section class="cart">
+  <div class="container cart__grid">
+    <h1 class="h1 site__main-title cart__title">Корзина</h1>
+    <button class="btn-reset btn btn--bordered cart__clear"
+            type="button">Очистить корзину</button>
+    <ul class="list-reset cart__list">
+      @include('product.html')
+      @include('product.html')
+      @include('product.html')
+    </ul>
+    @include('total.html')
+  </div>
+</section>

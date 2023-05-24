@@ -8,7 +8,8 @@ const beforeOpenOption = {
   }
 };
 
-const simpleModal = new HystModal( Object.assign( Options.Modal, beforeOpenOption ) );
+const simpleModal = new HystModal( Options.Modal );
+const orderModal = new HystModal( Object.assign( Options.Modal, beforeOpenOption ) );
 
 const initModal = ( name = simpleModal, handler = 'data-hystmodal' ) => {
   name.config.linkAttributeName = handler;
@@ -23,5 +24,6 @@ const renderOrderTitle = ( modal ) => {
 
 export {
   simpleModal,
+  orderModal,
   initModal
 };

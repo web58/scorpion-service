@@ -1,0 +1,70 @@
+<template id="pickup-point-list">
+  <div class="checkout-pickup">
+    <div class="checkout-pickup__title">Выберите пункт самовывоза</div>
+    <div class="checkout-pickup__list">
+      <div>
+        <input class="form__radio"
+               type="radio"
+               name="Пункт&nbsp;самовывоза"
+               id="pickup-point-01"
+               value="Магазин Скорпион-Сервис"
+               checked>
+        <label for="pickup-point-01">
+          <span class="checkout-pickup__label">
+            <b>Магазин Скорпион-Сервис</b>
+            <span>г. Пенза, ул. Проспект Победы, 107Б</span>
+            <span class="checkout-pickup__shedule">
+              <span>пн-пт 8:00–18:00</span>
+              <span>сб-вс 8:00–17:00</span>
+            </span>
+          </span>
+        </label>
+      </div>
+      <div>
+        <input class="form__radio"
+               type="radio"
+               name="Пункт&nbsp;самовывоза"
+               id="pickup-point-02"
+               value="Магазин ROSSVIK">
+        <label for="pickup-point-02">
+          <span class="checkout-pickup__label">
+            <b>Магазин ROSSVIK</b>
+            <span>г. Пенза, ул. Калинина, 158</span>
+            <span class="checkout-pickup__shedule">
+              <span>пн-пт 8:00–18:00</span>
+              <span>сб-вс 8:00–17:00</span>
+            </span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="personal-company">
+  <div class="checkout__fullwidth">
+    <label class="small-text form__label"
+           for="checkout-personal-company">Название организации *</label>
+    <input class="form__input"
+           type="text"
+           name="Название&nbsp;организации"
+           id="checkout-personal-company"
+           placeholder="Название организации"
+           data-validate="company"
+           required>
+  </div>
+</template>
+
+<template id="personal-adress">
+  <div class="checkout__fullwidth">
+    <label class="small-text form__label"
+           for="checkout-personal-adress">Адрес доставки *</label>
+    <input class="form__input"
+           type="text"
+           name="Адрес&nbsp;доставки"
+           id="checkout-personal-adress"
+           placeholder="Адрес доставки"
+           data-validate="adress"
+           required>
+  </div>
+</template>

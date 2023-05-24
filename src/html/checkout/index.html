@@ -1,0 +1,37 @@
+<section>
+  <div class="container">
+    <h1 class="h1 site__main-title">Оформление заказа</h1>
+    <form class="form checkout"
+          id="checkout-form"
+          data-validate>
+      <div class="checkout__fields">
+        @include('type.html')
+        @include('delivery.html')
+        @include('personal.html')
+      </div>
+      <div class="checkout__total">
+        <div class="cart-total">
+          <span class="cart-total__title">Сумма заказа</span>
+          <span class="cart-total__price"><span>48 720</span> руб.</span>
+          <div class="cart-total__btn">
+            <button class="btn-reset btn"
+                    type="submit">Оформить заказ</button>
+          </div>
+          <div class="small-text cart-total__link">
+            <a href="page-cart.html">Изменить заказ</a>
+          </div>
+        </div>
+        <div>
+          <input class="form__checkbox"
+                 type="checkbox"
+                 id="checkout-confirm"
+                 data-validate="confirm"
+                 required>
+          <label class="small-text"
+                 for="checkout-confirm">@include('../utils/confirm-order.html')</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+@include('templates.html')

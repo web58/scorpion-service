@@ -31,9 +31,15 @@
     }
   }
 
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--green);
+  }
+
   &__textarea {
     resize: none;
-    height: 6em;
+    height: 8em;
   }
 
   &__checkbox {
@@ -43,7 +49,7 @@
       position: relative;
       padding-left: 28px;
       display: inline-block;
-      color: var(--gray);
+      color: inherit;
       cursor: pointer;
       user-select: none;
 
@@ -65,7 +71,7 @@
 
     &:focus-visible + label {
       &::before {
-        box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--black);
+        box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--black-100);
       }
     }
 
@@ -79,6 +85,55 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 12px 8px;
+      }
+    }
+  }
+
+  &__radio {
+    @include visually-hidden;
+
+    & + label {
+      position: relative;
+      padding-left: 28px;
+      display: inline-block;
+      color: inherit;
+      cursor: pointer;
+      user-select: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--accent);
+        border-radius: 50%;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--accent);
+        opacity: 0;
+        transition: opacity .1s ease-in-out;
+      }
+    }
+
+    &:focus-visible + label {
+      &::before {
+        box-shadow: 0 0 0 1px var(--white), 0 0 0 2px var(--black-100);
+      }
+    }
+
+    &:checked + label {
+      &::after {
+        opacity: 1;
       }
     }
   }

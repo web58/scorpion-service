@@ -19,7 +19,17 @@ export const sendData = ( evt ) => {
     } )
     .then( ( data ) => {
       if ( data.ok ) {
-        evt.target.id === 'order-modal-form' ? simpleModal.open( '#order-ok-modal' ) : simpleModal.open( '#send-ok-modal' );
+        switch ( evt.target.id ) {
+          case 'order-modal-form':
+            simpleModal.open( '#order-ok-modal' );
+            break;
+          case 'checkout-form':
+            console.log( 'Успешное оформление заказа' ); //eslint-disable-line
+            break;
+          default:
+            simpleModal.open( '#send-ok-modal' );
+            break;
+        }
         evt.target.reset();
       } else {
         simpleModal.open( '#send-error-modal' );

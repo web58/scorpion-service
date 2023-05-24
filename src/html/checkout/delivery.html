@@ -1,0 +1,44 @@
+<fieldset class="checkout__fieldset">
+  <legend class="h4">Доставка</legend>
+  <div class="checkout__grid">
+    <div>
+      <input class="form__radio"
+             type="radio"
+             name="Доставка"
+             data-delivery-type
+             id="checkout-delivery-pickup"
+             value="Самовывоз"
+             checked>
+      <label for="checkout-delivery-pickup">
+        <b>Самовывоз</b>
+        <span class="checkout__delivery-descr">Самовывоз из магазинов Скорпион-Сервис и Россвик</span>
+      </label>
+    </div>
+    <div>
+      <input class="form__radio"
+             type="radio"
+             name="Доставка"
+             data-delivery-type
+             id="checkout-delivery-region"
+             value="Доставка по г. Пенза и области">
+      <label for="checkout-delivery-region">
+        <b>Доставка по г. Пенза и области</b>
+        <span class="checkout__delivery-descr">Бесплатная доставка в пределах Пензенской области</span>
+      </label>
+    </div>
+    <div>
+      <input class="form__radio"
+             type="radio"
+             name="Доставка"
+             data-delivery-type
+             id="checkout-delivery-other"
+             value="Доставка в другой город">
+      <label for="checkout-delivery-other">
+        <b>Доставка в другой город</b>
+        <span class="checkout__delivery-descr">Выбор способа доставки обсуждается с менеджером</span>
+      </label>
+    </div>
+  </div>
+  <div class="checkout__pickup-points">
+  </div>
+</fieldset>

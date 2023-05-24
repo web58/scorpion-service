@@ -9,6 +9,7 @@ import {
 
 import {
   initModal,
+  orderModal
 } from './modules/modal.js';
 
 import {
@@ -31,11 +32,16 @@ import {
   initPriceFilter
 } from './modules/filter-price.js';
 
+import {
+  initCheckoutForm
+} from './modules/checkout.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
 
   window.addEventListener( 'load', () => {
     initModal();
+    initModal( orderModal );
     initScrollTop();
     validateForms();
     initHeaderSettings();
@@ -49,5 +55,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
         swiper: initSlider( '.product-images__thumbs-slider', Options.Swiper.ProductThumbs ),
       },
     } ) );
+    initCheckoutForm();
   } );
 } );
